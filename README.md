@@ -18,4 +18,5 @@ https://git.hostco.ru/devops/acm-scripts/raw/develop/reinstall.sh
 
 
 # Authors
+
 * Владимир Лила
