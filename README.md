@@ -1,12 +1,12 @@
-## Скрипт для хранения sh скриптов развертки ACM платформы
+# Скрипт для хранения sh скриптов развертки ACM платформы
 
-### Скрипт переустановки ACM работает только если ACM уже был установлен на машине
+#### Скрипт переустановки ACM работает только если ACM уже был установлен на машине
 
 
-#### Запуск
+# Запуск
 скачать sh скрипт на машину
 
-https://git.hostco.ru/devops/acm-scripts/raw/develop/reinstall.sh
+wget https://git.hostco.ru/devops/acm-scripts/raw/develop/reinstall.sh
 
 выполнить
 
@@ -14,9 +14,9 @@ https://git.hostco.ru/devops/acm-scripts/raw/develop/reinstall.sh
 
 зайти под rooty запустить командой
 
-```./scriptName.sh```
+`./scriptName.sh`
 
 
-# Authors
+# Автор
 
 * Владимир Лила
