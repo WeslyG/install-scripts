@@ -6,13 +6,16 @@
 #### Запуск
 скачать sh скрипт на машину
 
-!ВСТАВИТЬ ССЫЛКУ
+https://git.hostco.ru/devops/acm-scripts/raw/develop/reinstall.sh
 
 выполнить
 
-```chmod +x psql##.sh```
+```chmod +x scriptName.sh```
 
-запустить командой
+зайти под rooty запустить командой
 
-```sudo ./psql##.sh```
+```./scriptName.sh```
 
+
+# Authors
+* Владимир Лила

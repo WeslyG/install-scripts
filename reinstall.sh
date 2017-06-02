@@ -1,4 +1,16 @@
 #!/bin/bash
+# Юзера ACM Надо создавать супером командой -Ps
+# export PGPASSWORD='ACMacm'
+
+# Пароль для бд
+# PGPASSFILE=/tmp/pgpasswd$$
+# echo "localhost:5432:acm:acm:ACMacm" > $PGPASSFILE
+# chmod 600 $PGPASSFILE
+# export PGPASSFILE
+# psql acm acm
+# rm $PGPASSFILE
+
+# Начали
 systemctl stop node
 systemctl stop tomcat
 
@@ -9,13 +21,13 @@ cd acm
 mvn package
 rm -rf /opt/tomcat/log/acm.log
 rm -rf /opt/tomcat/webapps/*.war
-cp /rest/target/*.war /opt/tomcat/webapps/
+cp /tmp/acm/rest/target/*.war /opt/tomcat/webapps/
 
-su postgres
-dropdb acm
-createdb -O acm acm
+systemctl stop psql
+systemctl start psql
+dropdb -h localhost -U acm acm
+createdb -h localhost -U acm -O acm acm
 psql -h localhost -U acm -f /tmp/acm/etc/acm.sql acm
-exit
 
 cd /opt/
 mv /opt/acm-client/src/config.js /opt/
@@ -24,9 +36,9 @@ git clone https://lila@git.hostco.ru/platform/acm-client.git -b dev
 rm -rf /opt/acm-client/src/config.js
 mv /opt/config.js /opt/acm-client/src/
 cd acm-client
-npm install
+sudo npm install
 
 systemctl start tomcat
 systemctl start node
 
-echo "Все готово, можно запускать"
+echo "Все готово, ждем, пока соберет все webpack и можем проверять"
