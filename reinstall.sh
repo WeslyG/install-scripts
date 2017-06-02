@@ -3,12 +3,12 @@
 # export PGPASSWORD='ACMacm'
 
 # Пароль для бд
-# PGPASSFILE=/tmp/pgpasswd$$
-# echo "localhost:5432:acm:acm:ACMacm" > $PGPASSFILE
-# chmod 600 $PGPASSFILE
-# export PGPASSFILE
-# psql acm acm
-# rm $PGPASSFILE
+PGPASSFILE=/tmp/pgpasswd$$
+echo "localhost:5432:acm:acm:ACMacm" > $PGPASSFILE
+chmod 600 $PGPASSFILE
+export PGPASSFILE
+psql acm acm
+rm $PGPASSFILE
 
 # Начали
 systemctl stop node
