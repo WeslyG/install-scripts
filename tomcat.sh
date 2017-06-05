@@ -10,7 +10,7 @@ ln -s tomcat /opt/$name
 ln -s /tomcat /opt/$name
 
 #Скачиваем конфиг
-wget https://git.hostco.ru/devops/acm-scripts/raw/master/tomcat.service
+wget https://git.hostco.ru/devops/acm-scripts/raw/develop/tomcat.service
 # sed -r 's/Environment=JAVA_HOME=\/usr\/lib\/jvm\/jre/Environment=$JAVA_HOME/g' tomcat.service > tomcat.service2
 
 
