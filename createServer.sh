@@ -1,4 +1,6 @@
 #!/bin/bash
+# Юзера ACM Надо создавать супером командой -Ps
+
 
 # cd /tmp
 # wget https://git.hostco.ru/devops/acm-scripts/raw/develop/jdkInstall.sh
