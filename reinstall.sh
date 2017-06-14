@@ -12,6 +12,8 @@ cd acm
 mvn package
 rm -rf /opt/tomcat/log/acm.log
 rm -rf /opt/tomcat/webapps/*.war
+rm -rf /opt/tomcat/webapps/acm*
+
 cp /tmp/acm/rest/target/*.war /opt/tomcat/webapps/
 
 systemctl stop psql
