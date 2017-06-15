@@ -10,11 +10,13 @@ rm -rf acm
 git clone --branch $1 git@git.hostco.ru:platform/acm.git
 cd acm
 mvn package
-rm -rf /opt/tomcat/log/acm.log
+rm -rf /tomcat/logs/*
 rm -rf /opt/tomcat/webapps/*.war
 rm -rf /opt/tomcat/webapps/acm*
 
 cp /tmp/acm/rest/target/*.war /opt/tomcat/webapps/
+
+cp /tmp/acm/mailer/target/*.war /opt/tomcat/webapps/
 
 systemctl stop psql
 systemctl start psql
