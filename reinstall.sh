@@ -13,6 +13,7 @@ mvn package
 rm -rf /tomcat/logs/*
 rm -rf /opt/tomcat/webapps/*.war
 rm -rf /opt/tomcat/webapps/acm*
+rm -rf /opt/tomcat/webapps/mailer*
 
 cp /tmp/acm/rest/target/*.war /opt/tomcat/webapps/
 
