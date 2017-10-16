@@ -4,6 +4,7 @@ FileName="apache-tomcat-8.5.15.tar.gz"
 
 systemctl stop tomcat
 userdel tomcat -f
+cp tomcat.service /etc/systemd/system/tomcat.service
 
 cd /opt
 rm -rf $FoulderName
@@ -28,12 +29,12 @@ chown -R tomcat webapps/ work/ temp/ logs/
 cd /opt && sudo chown -R tomcat tomcat/
 
 #Скачиваем конфиг
-wget https://git.hostco.ru/devops/acm-scripts/raw/develop/tomcat.service
+# wget https://git.hostco.ru/devops/acm-scripts/raw/develop/tomcat.service
 
 #Ставим на внешку
 # wget http://wesly.hopto.org/tomcat.service
 
-mv tomcat.service /etc/systemd/system/tomcat.service
+# mv tomcat.service /etc/systemd/system/tomcat.service
 rm -rf $FileName
 
 systemctl daemon-reload
