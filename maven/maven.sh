@@ -1,6 +1,6 @@
 #!/bin/bash
-# Скрипт для версии 3.5.0
-version="3.5.0"
+# Скрипт для версии 3.5.2
+version="3.5.2"
 cd /tmp/
 wget http://apache-mirror.rbc.ru/pub/apache/maven/maven-3/${version}/binaries/apache-maven-${version}-bin.tar.gz
 sudo tar xzf apache-maven-${version}-bin.tar.gz -C /usr/local
