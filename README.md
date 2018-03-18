@@ -6,7 +6,7 @@
 # Запуск
 скачать sh скрипт на машину
 
-wget https://git.hostco.ru/devops/acm-scripts/raw/develop/reinstall.sh
+wget https://github.com/WeslyG/install-scripts/blob/master/init_centOs.sh
 
 выполнить
 
